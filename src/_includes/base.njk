@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title %} {{ title }} - loudbytes{% else %}loudbytes{% endif %}</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <!--
+      <div class="left-hand">
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="/">about</a>
+          <a href="/blog">blog</a>
+          <a href="/links">links</a>
+        </nav>
+      </div>
+      <div>
+        <h1><a href="/">loudbytes</a></h1>
+      </div>
+      <div class="right-hand">
+        <nav class="secondary-nav" aria-label="Secondary navigation">
+          <a href="/rss">rss</a>
+        </nav>
+      </div>
+      -->
+      <div class="container">
+        <h1><a href="/">loudbytes</a></h1>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="/">about</a>
+          <a href="/blog">blog</a>
+          <a href="/links">links</a>
+          <a href="/rss">rss</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      {{ content | safe }}
+    </main>
+
+    <footer>&copy; loudbytes 2025</footer>
+  </body>
+</html>

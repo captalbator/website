@@ -1,0 +1,19 @@
+---
+layout: base.njk
+---
+
+<article>
+  <h1>Blog</h1>
+
+  <ul class="post-list">
+  {% for post in collections.blog %}
+    {% if post.url != "/blog/" %}
+      <li>
+        <time>{{post.date.getUTCFullYear()}}-{{post.date.getUTCMonth()}}-{{post.date.getUTCDate()}}</time>
+        <a href="{{post.url}}">{{post.data.title}}</a>
+        {%if post.description %}- <p>{{post.description}}</p>{% endif %}
+      </li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+</article>
