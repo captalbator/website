@@ -2,7 +2,8 @@
 
 body,
 html {
-  background: #1D1C19;
+  /*background: #1b1a1a;*/
+  background: #1D1D1D;
   font-family: sans-serif;
   font-size: 16px;
   color: #c5c9c5;
@@ -10,11 +11,11 @@ html {
 }
 
 a {
-  color: SlateBlue;
+  color: #8470FF;
 }
 
 main a:visited {
-  color: DarkViolet;
+  color: #AB1BDF;
 }
 
 body {
@@ -29,11 +30,11 @@ header {
   width: 100%;
   background: #282727;
   box-shadow: 0 0 10px #12120f;
+  height: 80px;
 
   padding: 0;
-
+  
   display: flex;
-
   justify-content: center;
 }
 
@@ -41,38 +42,44 @@ a {
   text-decoration: none;
 }
 
+nav a:hover {
+  text-decoration: none;
+}
+
 header a {
   color: inherit;
 }
 
-
-/*
-header > div.left-hand {
-  flex: 1;
-  margin-right: auto;
-  padding-left: 0.6em;
-  padding-top: 0.4em;
-}
-
-header > div.right-hand {
-  flex: 1;
-  margin-left: auto;
-  padding-right: 0.6em;
-  padding-top: 0.4em;
-  text-align: right;
-}
-*/
-
 header > div.container {
   position: relative;
-  margin-bottom: 0.6rem;
   max-width: 700px;
-  padding: 0;
+  padding: 0 10px;
   height: 4rem;
 }
 
 header .container h1 {
-  margin: 0.6rem 0;
+  margin: 0.2rem 0;
+  align-self: flex-start;
+}
+
+header .container a:hover {
+  color: #8470FF;
+}
+
+header .main-nav {
+  align-self: flex-end;
+}
+
+.main-nav {
+  margin: 0 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.main-nav a {
 }
 
 main {
@@ -83,23 +90,25 @@ main {
   overflow-wrap: break-word;
   padding-top: 5rem;
   margin: auto;
+  padding-left:1rem;
+  padding-right:1rem;
 }
 
 main article > time {
-    display: block;
-    text-align: center;
-    font-size: 0.8em;
-    color: DimGray;
+  display: block;
+  text-align: center;
+  font-size: 0.8em;
+  color: DimGray;
 }
 
 article .post-list time {
-    display: inline-block;
-    color: DimGray;
-    margin-right: 0.2em;
+  display: inline-block;
+  color: DimGray;
+  margin-right: 0.2em;
 }
 
 article .post-list li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 main article h1 {
@@ -115,16 +124,102 @@ footer {
   bottom: 0;
   margin: 0;
   padding: 0;
+  padding-top: 1rem;
   color: #65696555;
 }
 
-.main-nav {
-  margin: 0 0;
-  padding: 0;
-  list-style: none;
+
+code {
+  display: block;
+  background: #181616;
+  border-radius: 5px;
+  border: 1px solid #282626;
+  /*box-shadow: 0 0 10px #00000040;*/
+  padding: 10px;
+  font-family: monospace;
+  font-size: 14px;
+  color: #c5c9c5;
+  overflow-x: auto;
 }
 
-.main-nav a {
-  padding: 0 0.3em 0 0;
+/* Code theme */
+
+.hljs-subst {
 }
 
+.hljs-formula,
+.hljs-attr,
+.hljs-property,
+.hljs-params {}
+
+.hljs-comment {
+  color: #737c73;
+}
+.hljs-tag,
+.hljs-punctuation {
+  color: #c5c;
+}
+
+.hljs-keyword {
+  color: #8992a7;
+}
+
+.hljs-string {
+  color: #8a9a7b;
+}
+
+.hljs-number {
+  color: #a292a3;
+}
+
+.hljs-type {
+  color: #8ea4a2;
+}
+
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-quote,
+.hljs-template-tag,
+.hljs-deletion {
+  color: #880000;
+}
+
+.hljs-title {
+  color: #8ba4b0;
+}
+.hljs-section {
+  color: #880000;
+  font-weight: bold;
+}
+
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #ab5656;
+}
+
+.hljs-literal {
+  color: #695;
+}
+
+.hljs-addition {
+  color: #397300;
+}
+
+.hljs-meta,
+.hljs-operator,
+.hljs-meta .hljs-keyword {
+  color: #c4746e;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}

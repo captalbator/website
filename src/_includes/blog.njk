@@ -4,6 +4,12 @@ layout: base.njk
 
 <article>
   <h1>{{title}}</h1>
+	<!-- TODO: Better date display -->
   <time>{{page.date.getUTCFullYear()}}-{{page.date.getUTCMonth()}}-{{page.date.getUTCDate()}}</time>
+	{% for tag in data.tags %}
+		{% if tag != "blog" %}
+			<p>{{tag}}</p>
+		{% endif %}
+	{% endfor %}
   {{ content | safe }}
 </article>
