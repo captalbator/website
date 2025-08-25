@@ -1,7 +1,7 @@
 ---
 title: Hello World!
 description: My humble little website goes online.
-tags: ["test", "tag", "first-post"]
+tags: []
 ---
 
 I've been reading a lot of blogs about many different topics lately and I decided I might try making my own.

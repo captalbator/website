@@ -8,6 +8,7 @@ html {
   font-size: 16px;
   color: #c5c9c5;
   height: 100%;
+  line-height: 1.5;
 }
 
 a {
@@ -42,13 +43,10 @@ a {
   text-decoration: none;
 }
 
-nav a:hover {
-  text-decoration: none;
-}
-
 header a {
   color: inherit;
 }
+
 
 header > div.container {
   position: relative;
@@ -79,14 +77,10 @@ header .main-nav {
   justify-content: space-evenly;
 }
 
-.main-nav a {
-}
-
 main {
   display: block;
   text-align: justify;
   max-width: 700px;
-  line-height: 1.5;
   overflow-wrap: break-word;
   padding-top: 5rem;
   margin: auto;
@@ -113,6 +107,36 @@ article .post-list li {
 
 main article h1 {
   text-align: center;
+}
+
+.homepage h2,
+.homepage h3 {
+  text-align: center;
+}
+
+.homepage li {
+  margin-bottom: 30px;
+}
+
+.homepage li > time {
+  text-align: center
+}
+
+.page-nav a,
+.page-nav a:visited {
+  color: #8470ff;
+}
+
+.page-nav {
+  display: flex;
+}
+
+.previous-page {
+  margin-right: auto;
+}
+
+.next-page {
+  margin-left: auto;
 }
 
 footer {
@@ -144,13 +168,14 @@ code {
 
 /* Code theme */
 
-.hljs-subst {
-}
+/*
+.hljs-subst {}
 
 .hljs-formula,
 .hljs-attr,
 .hljs-property,
 .hljs-params {}
+*/
 
 .hljs-comment {
   color: #737c73;
