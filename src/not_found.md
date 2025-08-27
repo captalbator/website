@@ -1,6 +1,7 @@
 ---
 title: Page Not Found
 layout: base.njk
+permalink: "/not_found.html"
 ---
 
 # Oops!

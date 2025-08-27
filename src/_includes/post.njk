@@ -1,0 +1,27 @@
+---
+layout: base.njk
+---
+
+<article>
+  <div class="post-header">
+    <h1>{{ title }}</h1>
+    <div class="time-tags">
+      <time> {% formatdatefull page.date %}</time>
+      {% if tags | length > 1 %}
+      <p class="post-tags">
+        tags: [
+        {% for tag in tags %}
+          {% if tag != "post" %}
+          <a class="underline" href="/tags/{{ tag | slugify }}/index.html">{{ tag }}</a>{{ "," if loop.last == false }}
+          {% endif %}
+        {% endfor %}
+        ]
+      </p>
+      {% endif %}
+    </div>
+  </div>
+  {{note | safe}}
+  {{ content | safe }}
+</article>
+
+<!-- TODO: Add link to next/previous blog post at the bottom of the article -->

@@ -6,36 +6,21 @@
     <title>{% if title %} {{ title }} - loudbytes{% else %}loudbytes{% endif %}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" type="text/css" media="all" href="/style.css">
+
+    <!-- find anything interesting? -->
   </head>
   <body>
     <header>
-      <!--
-      <div class="left-hand">
-        <nav class="main-nav" aria-label="Main navigation">
-          <a href="/">about</a>
-          <a href="/blog">blog</a>
-          <a href="/links">links</a>
-        </nav>
-      </div>
-      <div>
-        <h1><a href="/">loudbytes</a></h1>
-      </div>
-      <div class="right-hand">
-        <nav class="secondary-nav" aria-label="Secondary navigation">
-          <a href="/rss">rss</a>
-        </nav>
-      </div>
-      -->
       <div class="container">
         <div class="home-link-div">
           <h1><a href="/">loudbytes</a></h1>
         </div>
         <div class="nav-div">
           <nav class="main-nav" aria-label="Main navigation">
-            <a href="/about">about</a>
-            <a href="/blog">blog</a>
-            <a href="/tags">tags</a>
-            <a href="/rss">rss</a>
+            <a href="/about/">about</a>
+            <a href="/blog/">blog</a>
+            <a href="/tags/">tags</a>
+            <a href="/feed.xml">rss</a>
           </nav>
         </div>
       </div>
@@ -45,6 +30,6 @@
       {{ content | safe }}
     </main>
 
-    <footer>&copy; loudbytes 2025</footer>
+    <footer>&copy; Antoine Gallien 2025</footer>
   </body>
 </html>

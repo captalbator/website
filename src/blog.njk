@@ -11,28 +11,18 @@ pagination:
 
 <article>
   <h1>Blog</h1>
-
   <ul class="post-list">
-  {% for post in posts %}
-    <li>
-      <p>
-      <a href="{{post.url}}">{{post.data.title}}</a>
-      <time>{{post.date.getUTCFullYear()}}-{{post.date.getUTCMonth()}}-{{post.date.getUTCDate()}}</time>
-      {% excerpt post %}
-      </p>
-    </li>
+  {% for post in posts | reverse %}
+  {% include "post-preview.njk" %}
   {% endfor %}
   </ul>
-
   <nav class="page-nav">
-  {% if pagination.href.previous %}
-  <a class="previous-page" href="{{pagination.href.previous}}">&lt;&lt; previous</a>
-  {% endif %}
-
-  {% if pagination.href.next %}
-  <a class="next-page" href="{{pagination.href.next}}">next &gt;&gt;</a>
-  {% endif %}
+    <a class="previous-page {{"hidden" if pagination.href.previous == nil}}" href="{{pagination.href.previous}}">&lt;&lt; previous</a>
+    <p class="page-nav-pages">
+    {%- for pageEntry in pagination.pages %}
+    <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} id="current-page" aria-current="page"{% endif %}>{{ loop.index }}</a>
+    {%- endfor %}
+    </p>
+    <a class="next-page {{"hidden" if pagination.href.next == nil}}" href="{{pagination.href.next}}">next &gt;&gt;</a>
   </nav>
-  
-
 </article>

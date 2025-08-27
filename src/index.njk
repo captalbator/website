@@ -5,17 +5,23 @@ eleventyImport:
 ---
 
 <article class="homepage">
-  <h2>Last 10 posts:</h2>
+  <h1>Recent Posts</h1>
 
   <ul class="post-list">
   {% for post in collections.post %}
+  <!--
     <li>
       <p>
-        <h3><a href="{{post.url}}">{{post.data.title}}</a></h3>
-        <time>{{post.date.getUTCFullYear()}}-{{post.date.getUTCMonth()}}-{{post.date.getUTCDate()}}</time>
-        {% excerpt post %}
+        <h2 class="post-title"><a href="{{post.url}}">{{post.data.title}}</a></h2>
+        <time>{% formatdatefull post.page.date %}</time>
+        <p class="post-excerpt">{{post.page.excerpt}}</p>
+        <p class="continue-reading"><a href="{{post.url}}">[ . . . ]</a></p>
       </p>
     </li>
+  -->
+
+  {% include "post-preview.njk" %}
+
   {% endfor %}
   </ul>
 </article>

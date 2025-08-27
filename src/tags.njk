@@ -1,32 +1,16 @@
 ---
 layout: base.njk
-pagination:
-  data: collections.tags
-  size: 10
-  alias: tags
-  reverse: true
 ---
 
 <article>
-  <h1>Tags</h1>
-
-  <ul class="post-list">
-  {% for tag in tags %}
+  <h1>All Tags</h1>
+  <ul class="tag-list">
+  {% for tag in collections.tags %}
+    {% set posts = collections.post | filterByTag(tag) %}
     <li>
-      <a href="/tags/{{ tag | slugify }}/index.html">{{tag}}</a>
+      <a class="underline" href="/tags/{{ tag | slugify }}/index.html">{{tag}}</a>
+      ({{posts | length}})
     </li>
   {% endfor %}
   </ul>
-
-  <nav class="page-nav">
-  {% if pagination.href.previous %}
-  <a class="previous-page" href="{{pagination.href.previous}}">&lt;&lt; previous</a>
-  {% endif %}
-
-  {% if pagination.href.next %}
-  <a class="next-page" href="{{pagination.href.next}}">next &gt;&gt;</a>
-  {% endif %}
-  </nav>
-  
-
 </article>
