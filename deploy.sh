@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 if [ -d ./_site ]; then
 	rm -rf ./_site
