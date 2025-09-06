@@ -12,7 +12,7 @@ pagination:
 <article>
   <h1>Blog</h1>
   <ul class="post-list">
-  {% for post in posts | reverse %}
+  {% for post in posts %}
   {% include "post-preview.njk" %}
   {% endfor %}
   </ul>
